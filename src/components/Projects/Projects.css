@@ -1,0 +1,333 @@
+.projects-container {
+  padding: 24px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.add-project-btn {
+  background-color: #0165FF;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.project-title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.project-title h3 {
+  margin: 0;
+  color: #2C3E50;
+}
+
+.workspace-tag {
+  font-size: 12px;
+  padding: 2px 8px;
+  background-color: #E8EEF9;
+  color: #6B7A99;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.project-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.project-actions button {
+  background: none;
+  border: none;
+  color: #6B7A99;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.project-actions button:hover {
+  color: #0165FF;
+}
+
+.project-description {
+  color: #6B7A99;
+  margin-bottom: 16px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.project-status {
+  margin: 16px 0;
+}
+
+.status-planning {
+  background-color: #E8EEF9;
+  color: #6B7A99;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.status-in-progress {
+  background-color: #FFF4E5;
+  color: #FF9800;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.status-completed {
+  background-color: #E8F5E9;
+  color: #4CAF50;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.project-progress {
+  margin: 16px 0;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #6B7A99;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: #E8EEF9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #0165FF;
+  transition: width 0.3s ease;
+}
+
+.project-tasks {
+  margin: 16px 0;
+  border-top: 1px solid #E8EEF9;
+  padding-top: 16px;
+}
+
+.project-tasks h4 {
+  color: #2C3E50;
+  margin: 0 0 12px 0;
+  font-size: 14px;
+}
+
+.task-item {
+  margin-bottom: 8px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #2C3E50;
+}
+
+.checkbox-container input {
+  display: none;
+}
+
+.checkmark {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #C3CAD9;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-container input:checked + .checkmark {
+  background-color: #0165FF;
+  border-color: #0165FF;
+}
+
+.checkbox-container input:checked + .checkmark::after {
+  content: '✓';
+  color: white;
+  font-size: 12px;
+}
+
+.checkbox-container span.completed {
+  text-decoration: line-through;
+  color: #6B7A99;
+}
+
+.project-team {
+  margin-top: 20px;
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #F5F8FA;
+  padding: 4px 8px;
+  border-radius: 16px;
+}
+
+.member-avatar {
+  width: 24px;
+  height: 24px;
+  background-color: #0165FF;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.project-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-edit-form input,
+.project-edit-form textarea,
+.project-edit-form select {
+  padding: 8px;
+  border: 1px solid #C3CAD9;
+  border-radius: 4px;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.modal-content h3 {
+  margin: 0 0 16px 0;
+  color: #2C3E50;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #C3CAD9;
+  border-radius: 4px;
+}
+
+.modal-content textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.modal-actions button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-actions button:first-child {
+  background-color: #0165FF;
+  color: white;
+  border: none;
+}
+
+.modal-actions button:last-child {
+  background-color: #E8EEF9;
+  color: #6B7A99;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    padding: 16px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
